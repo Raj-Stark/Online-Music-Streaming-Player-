@@ -18,7 +18,8 @@ const links = [
 
 const NavLinks = ({ handleClick }) => {
   return (
-    <div className="mt-10">
+    <div className="mt-4">
+      <div className="text-3xl font-semibold text-white mb-16">Rj Music</div>
       {links.map((item, i) => {
         return (
           <NavLink

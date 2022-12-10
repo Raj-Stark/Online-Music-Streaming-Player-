@@ -12,13 +12,14 @@ const CountryTracks = () => {
   const { data, isFetching, error } = useGetSongsByCountryQuery(country);
 
   useEffect(() => {
-    axios
-      .get(
-        "http://api.ipstack.com/49.36.221.248?access_key=c5613b070d0bf49a09cb0b9173509a57"
-      )
-      .then((res) => setCountry(res.data.country_code))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
+    // axios
+    //   .get(
+    //     "http://api.ipstack.com/49.36.221.248?access_key=c5613b070d0bf49a09cb0b9173509a57"
+    //   )
+    //   .then((res) => setCountry(res.data.country_code))
+    //   .catch((err) => console.log(err))
+    //   .finally(() => setLoading(false));
+    setCountry("IN");
   }, []);
 
   if (isFetching && loading)
